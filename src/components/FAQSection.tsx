@@ -56,13 +56,13 @@ const FAQSection = () => {
                   className="group border border-primary/30 bg-background px-6 py-2 transition-all duration-300 data-[state=open]:border-primary data-[state=open]:shadow-md hover:border-primary/60"
                 >
                   <AccordionPrimitive.Header className="flex">
-                    <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-heading text-lg font-medium text-foreground transition-all hover:text-primary [&[data-state=open]>svg]:rotate-90">
+                    <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-heading text-sm md:text-lg font-medium text-foreground transition-all hover:text-primary [&[data-state=open]>svg]:rotate-90">
                       <span className="pr-4">{faq.q}</span>
                       <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]:text-primary" />
                     </AccordionPrimitive.Trigger>
                   </AccordionPrimitive.Header>
 
-                  <AccordionPrimitive.Content className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                  <AccordionPrimitive.Content className="overflow-hidden text-xs md:text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                     <div className="pb-4 pt-2 text-muted-foreground leading-relaxed border-t border-dashed border-primary/20 mt-2">
                       {faq.a}
                     </div>

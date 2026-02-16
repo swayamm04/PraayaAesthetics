@@ -5,13 +5,11 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "HOME", href: "#home" },
-  { label: "ABOUT US", href: "#about" },
-  { label: "SERVICES", href: "#services" },
-  { label: "GALLERY", href: "#gallery" },
-  { label: "FAQ", href: "#faq" },
-  { label: "BLOGS", href: "#blogs" },
-  { label: "CONTACT US", href: "#contact" },
+  { label: "HOME", href: "/" },
+  { label: "OUR DOCTORS", href: "/our-doctors" },
+  { label: "SERVICES", href: "/services" },
+  { label: "GALLERY", href: "/gallery" },
+  { label: "CONTACT US", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -21,7 +19,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background shadow-sm">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <div className="relative h-12 w-48 lg:h-14 lg:w-56">
             <Image
               src="/logo.png"
@@ -48,7 +46,7 @@ const Navbar = () => {
 
         {/* CTA */}
         <a
-          href="#contact"
+          href="/contact"
           className="hidden lg:inline-block rounded-full border-2 border-primary px-6 py-2 text-sm font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
         >
           Book Appointment
@@ -83,7 +81,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="mt-4 block w-full rounded-full bg-primary text-primary-foreground px-6 py-3 text-center text-sm font-bold shadow-md hover:bg-primary/90 transition-all active:scale-95"
             >

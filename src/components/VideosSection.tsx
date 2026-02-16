@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, useRef } from "react";
+
 const videos = [
   { id: "H99Pvi-oqJU", title: "Immediate surgery results after ethnic thick skin rhinoplasty" },
   { id: "DcfkCMpGZqw", title: "A young boy with a huge dorsal hump visits Praaya for Rhinoplasty" },
@@ -6,20 +10,37 @@ const videos = [
 ];
 
 const VideosSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const scrollLeft = scrollRef.current.scrollLeft;
+      const scrollWidth = scrollRef.current.scrollWidth;
+      const itemWidth = scrollWidth / videos.length;
+      const index = Math.round(scrollLeft / itemWidth);
+      setActiveIndex(index);
+    }
+  };
+
   return (
     <section id="gallery" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-4xl md:text-5xl font-heading font-semibold text-foreground mb-12">
           Popular Videos
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex overflow-x-auto snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-4 sm:pb-0 scrollbar-hide"
+        >
           {videos.map((video) => (
             <a
               key={video.id}
               href={`https://www.youtube.com/watch?v=${video.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+              className="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow min-w-[85%] sm:min-w-0 snap-center flex-shrink-0"
             >
               <div className="relative">
                 <img
@@ -39,6 +60,16 @@ const VideosSection = () => {
                 <p className="text-sm font-semibold text-foreground line-clamp-2">{video.title}</p>
               </div>
             </a>
+          ))}
+        </div>
+
+        {/* Mobile Indicators */}
+        <div className="flex justify-center gap-2 mt-4 sm:hidden">
+          {videos.map((_, index) => (
+            <div
+              key={index}
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-primary w-4" : "bg-primary/30"}`}
+            />
           ))}
         </div>
       </div>

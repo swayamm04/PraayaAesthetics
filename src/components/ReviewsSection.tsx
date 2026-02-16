@@ -124,25 +124,25 @@ const ReviewsSection = () => {
 
         <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start max-w-7xl mx-auto">
           {/* Summary Card (Fixed) */}
-          <div className="w-full max-w-md lg:w-[350px] shrink-0">
-            <div className="bg-card rounded-xl p-6 shadow-md border border-border/50 flex flex-col justify-between h-full min-h-[300px]">
+          <div className="w-full max-w-[260px] md:max-w-md lg:w-[350px] shrink-0 mx-auto">
+            <div className="bg-card rounded-xl p-4 md:p-6 shadow-md border border-border/50 flex flex-col justify-between h-full min-h-0 md:min-h-[300px]">
               <div>
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-2 md:mb-4">
                   <div className="bg-background rounded-full p-1 shadow-sm border">
                     <GoogleIcon />
                   </div>
-                  <h3 className="font-bold text-lg leading-tight">Praaya Aesthetic Internationale</h3>
+                  <h3 className="font-bold text-sm md:text-lg leading-tight">Praaya Aesthetic Internationale</h3>
                 </div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-orange-400 font-bold text-xl">5.0</span>
+                  <span className="text-orange-400 font-bold text-lg md:text-xl">5.0</span>
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-orange-400 text-orange-400" />
+                      <Star key={i} className="h-4 w-4 md:h-5 md:w-5 fill-orange-400 text-orange-400" />
                     ))}
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4">Based on 72 reviews</p>
-                <div className="flex items-center gap-1 text-xs text-muted-foreground mb-6">
+                <p className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-4">Based on 72 reviews</p>
+                <div className="flex items-center gap-1 text-[10px] md:text-xs text-muted-foreground mb-3 md:mb-6">
                   <span>powered by</span>
                   <span className="font-bold text-foreground">Google</span>
                 </div>
@@ -151,7 +151,7 @@ const ReviewsSection = () => {
                 href="https://www.google.com/maps/place/Praaya+Aesthetic+Internationale/@13.9386056,75.5698573,17z/data=!4m8!3m7!1s0x46ae416d5c9f2d19:0x219439fbb2538d5b!8m2!3d13.9386056!4d75.5698573!9m1!1b1!16s%2Fg%2F11md2tfwb8?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noreferrer"
-                className="block w-full text-center bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                className="block w-full text-center bg-primary text-primary-foreground py-1.5 md:py-2 rounded-lg font-semibold text-xs md:text-base hover:bg-primary/90 transition-colors"
                 onClick={(e) => {
                   // e.preventDefault(); // allow link to work
                 }}
@@ -173,7 +173,7 @@ const ReviewsSection = () => {
               {reviews.map((review, i) => (
                 <div
                   key={i}
-                  className="min-w-[300px] md:min-w-[350px] snap-center bg-white rounded-xl p-6 shadow-sm border border-border/20 flex flex-col relative h-full"
+                  className="min-w-[300px] md:min-w-[350px] snap-center bg-white rounded-xl p-4 md:p-6 shadow-sm border border-border/20 flex flex-col relative h-full"
                 >
                   <div className="absolute top-6 right-6">
                     <GoogleIcon />
@@ -193,7 +193,7 @@ const ReviewsSection = () => {
                     ))}
                   </div>
                   {review.text && (
-                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-4">"{review.text}"</p>
+                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-4">"{review.text}"</p>
                   )}
                 </div>
               ))}
