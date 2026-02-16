@@ -7,6 +7,7 @@ export const metadata: Metadata = {
         default: "Praaya Aesthetic Internationale | Best Cosmetic Clinic in Shivamogga",
         template: "%s | Praaya Aesthetic Internationale",
     },
+    metadataBase: new URL("https://praayaaesthetics.com"),
     description: "Praaya Aesthetic Internationale offers world-class cosmetic and plastic surgery treatments in Shivamogga. Specializing in Rhinoplasty, Hair Transplants, Facelifts, and more. Dr. Prajwal and our expert team are dedicated to enhancing your natural beauty.",
     keywords: [
         "Cosmetic Surgery Shivamogga",
