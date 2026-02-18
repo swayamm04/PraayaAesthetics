@@ -28,9 +28,12 @@ const WhyChooseUs = () => {
   return (
     <section className="py-12 bg-[#FFF9F5]">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-3xl md:text-4xl font-heading font-semibold text-foreground mb-10">
-          Why Choose Us?
-        </h2>
+        <div className="flex flex-col items-center mb-10">
+          <h2 className="text-center text-3xl md:text-4xl font-heading font-semibold text-foreground">
+            Why Choose Us?
+          </h2>
+          <div className="h-0.5 w-10 bg-primary mt-2" />
+        </div>
 
         {/* Desktop Layout (lg+ screens) */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-4 items-center">
@@ -50,7 +53,7 @@ const WhyChooseUs = () => {
 
           {/* Center Image */}
           <div className="relative h-[400px] w-full items-center justify-center flex">
-            <div className="relative h-full w-full max-w-[300px] overflow-hidden rounded-t-[100px] bg-[#E8D556] pt-8">
+            <div className="relative h-full w-full max-w-[300px] overflow-hidden rounded-tr-[150px] rounded-tl-[150px] rounded-bl-[150px] rounded-br-[30px] bg-[#E8D556] pt-8">
               <Image
                 src={doctor}
                 alt="Dr Prajwal"
@@ -77,7 +80,7 @@ const WhyChooseUs = () => {
 
         {/* Mobile/Tablet Layout (< lg screens) */}
         <div className="lg:hidden flex flex-col gap-8">
-          <div className="relative h-[300px] w-full rounded-2xl overflow-hidden shadow-lg mx-auto max-w-sm">
+          <div className="relative h-[300px] w-full rounded-tr-[100px] rounded-tl-[100px] rounded-bl-[100px] rounded-br-[20px] overflow-hidden shadow-lg mx-auto max-w-sm bg-[#E8D556] pt-6">
             <Image
               src={doctor}
               alt="Dr Prajwal"

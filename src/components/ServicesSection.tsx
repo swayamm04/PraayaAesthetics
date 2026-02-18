@@ -1,59 +1,161 @@
 import Image from "next/image";
 
 const services = [
-  { name: "Facial Plastic Surgery", image: "/services/Facial Plastic Surgery.png" },
-  { name: "Cleft Surgeries", image: "/services/Cleft Surgeries.png" },
-  { name: "Rhinoplasty", image: "/services/Rhinoplasty.png" },
-  { name: "ENT", image: "/services/ENT.png" },
-  { name: "Tumours / Cysts", image: "/services/Tumours Cysts.png" },
-  { name: "Temporomandibular Joint", image: "/services/placeholder.png" },
-  { name: "Occuloplastic Surgery", image: "/services/placeholder.png" },
-  { name: "Gynaecomastia", image: "/services/placeholder.png" },
-  { name: "Sleep Clinic", image: "/services/placeholder.png" },
-  { name: "Dermatology", image: "/services/placeholder.png" },
-  { name: "Skin Rejuvenation", image: "/services/placeholder.png" },
-  { name: "Dermal Fillers", image: "/services/placeholder.png" },
-  { name: "Botox", image: "/services/placeholder.png" },
-  { name: "Laser Hair Reduction", image: "/services/placeholder.png" },
-  { name: "Anti-aging", image: "/services/placeholder.png" },
-  { name: "IV Glutathione", image: "/services/placeholder.png" },
-  { name: "Hair Regrowth", image: "/services/placeholder.png" },
-  { name: "Hair Transplant", image: "/services/placeholder.png" },
-  { name: "Laser Scar Treatment", image: "/services/placeholder.png" },
-  { name: "Medifacials", image: "/services/placeholder.png" },
-  { name: "Microblading & Micropigmentation", image: "/services/placeholder.png" },
-  { name: "Tattoo & Birthmark Removal", image: "/services/placeholder.png" },
-  { name: "Oral Cancer", image: "/services/placeholder.png" },
-  { name: "Liposuction / Abdominoplasty", image: "/services/placeholder.png" },
+  {
+    name: "Facial Plastic Surgery",
+    image: "/services/Facial Plastic Surgery.png",
+    description: "Enhance facial harmony and balance through advanced surgical procedures tailored to your unique features."
+  },
+  {
+    name: "Cleft Surgeries",
+    image: "/services/Cleft Surgeries.png",
+    description: "Corrective surgeries for cleft lip and palate to improve function, speech, and appearance."
+  },
+  {
+    name: "Rhinoplasty",
+    image: "/services/Rhinoplasty.png",
+    description: "Reshape the nose for improved aesthetics and function, creating a balanced and natural look."
+  },
+  {
+    name: "ENT",
+    image: "/services/ENT.png",
+    description: "Comprehensive care for Ear, Nose, and Throat conditions, ensuring optimal health and function."
+  },
+  {
+    name: "Tumours / Cysts",
+    image: "/services/Tumours Cysts.png",
+    description: "Expert diagnosis and surgical removal of benign and malignant growths with minimal scarring."
+  },
+  {
+    name: "Temporomandibular Joint",
+    image: "/services/placeholder.png",
+    description: "Specialized treatment for jaw joint disorders to relieve pain and restore proper jaw function."
+  },
+  {
+    name: "Occuloplastic Surgery",
+    image: "/services/placeholder.png",
+    description: "Functional and cosmetic surgery of the eyelids, tear ducts, and orbit to rejuvenate the eyes."
+  },
+  {
+    name: "Gynaecomastia",
+    image: "/services/placeholder.png",
+    description: "Male breast reduction surgery to achieve a flatter, more masculine chest contour."
+  },
+  {
+    name: "Sleep Clinic",
+    image: "/services/placeholder.png",
+    description: "Diagnosis and treatment of sleep disorders like sleep apnea to help you rest better."
+  },
+  {
+    name: "Dermatology",
+    image: "/services/placeholder.png",
+    description: "Advanced skin care solutions for acne, pigmentation, and other dermatological conditions."
+  },
+  {
+    name: "Skin Rejuvenation",
+    image: "/services/placeholder.png",
+    description: "Revitalize your skin with treatments designed to restore glow, texture, and youthfulness."
+  },
+  {
+    name: "Dermal Fillers",
+    image: "/services/placeholder.png",
+    description: "Restore lost volume, smooth wrinkles, and enhance facial contours with premium fillers."
+  },
+  {
+    name: "Botox",
+    image: "/services/placeholder.png",
+    description: "Reduce the appearance of fine lines and wrinkles for a smoother, more youthful complexion."
+  },
+  {
+    name: "Laser Hair Reduction",
+    image: "/services/placeholder.png",
+    description: "Safe and effective long-term hair reduction using state-of-the-art laser technology."
+  },
+  {
+    name: "Anti-aging",
+    image: "/services/placeholder.png",
+    description: "Comprehensive anti-aging treatments to combat signs of aging and maintain a youthful look."
+  },
+  {
+    name: "IV Glutathione",
+    image: "/services/placeholder.png",
+    description: "Skin brightening and detoxification therapy to improve overall skin health and radiance."
+  },
+  {
+    name: "Hair Regrowth",
+    image: "/services/placeholder.png",
+    description: "Effective therapies to stimulate hair growth and combat thinning hair."
+  },
+  {
+    name: "Hair Transplant",
+    image: "/services/placeholder.png",
+    description: "Permanent hair restoration surgery to restore hairline and density with natural results."
+  },
+  {
+    name: "Laser Scar Treatment",
+    image: "/services/placeholder.png",
+    description: "Advanced laser therapy to reduce the visibility of acne scars, surgical scars, and trauma scars."
+  },
+  {
+    name: "Medifacials",
+    image: "/services/placeholder.png",
+    description: "Medical-grade facials deep cleanse, exfoliate, and nourish your skin for a healthy glow."
+  },
+  {
+    name: "Microblading & Micropigmentation",
+    image: "/services/placeholder.png",
+    description: "Semi-permanent makeup solutions for perfectly shaped eyebrows and define features."
+  },
+  {
+    name: "Tattoo & Birthmark Removal",
+    image: "/services/placeholder.png",
+    description: "Laser removal of unwanted tattoos and birthmarks with precision and safety."
+  },
+  {
+    name: "Oral Cancer",
+    image: "/services/placeholder.png",
+    description: "Screening, diagnosis, and surgical management of oral cancer and pre-cancerous lesions."
+  },
+  {
+    name: "Liposuction / Abdominoplasty",
+    image: "/services/placeholder.png",
+    description: "Body contouring procedures to remove stubborn fat and tighten abdominal muscles."
+  },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 bg-secondary">
+    <section id="services" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-4">
-        <p className="text-center text-primary tracking-[0.25em] text-sm font-semibold uppercase mb-3">
-          What We Offer
-        </p>
-        <h2 className="text-center text-4xl md:text-5xl font-heading font-semibold text-foreground mb-12">
-          Our Services
-        </h2>
-        <div className="grid grid-rows-2 grid-flow-col auto-cols-[150px] md:auto-cols-[200px] gap-4 overflow-x-auto pb-6 snap-x snap-mandatory lg:grid-cols-6 lg:grid-rows-none lg:grid-flow-row lg:auto-cols-auto lg:pb-0 scrollbar-hide">
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {services.map((service) => (
             <div
               key={service.name}
-              className="group flex flex-col items-center justify-start text-center cursor-pointer snap-center h-full min-w-[100px]"
+              className="group relative bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden h-56 cursor-pointer"
             >
-              <div className="mb-4 relative h-12 w-12 transition-transform duration-300 group-hover:scale-110">
-                <Image
-                  src={service.image}
-                  alt={service.name}
-                  fill
-                  className="object-contain"
-                />
+              {/* Main Content (Icon + Title) */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:-translate-y-8">
+                <div className="mb-3 relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
+                  <Image
+                    src={service.image}
+                    alt={service.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-base font-heading font-semibold text-foreground text-center group-hover:text-primary transition-colors px-1 leading-tight">
+                  {service.name}
+                </h3>
               </div>
-              <span className="text-sm font-medium text-foreground leading-tight group-hover:text-primary transition-colors line-clamp-2">
-                {service.name}
-              </span>
+
+              {/* Hover Content (Description Popup) */}
+              <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-primary/20 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col items-center justify-center h-1/2">
+                <div className="w-8 h-1 bg-primary/20 rounded-full mb-2 mx-auto" />
+                <p className="text-xs text-muted-foreground text-center leading-relaxed line-clamp-3">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

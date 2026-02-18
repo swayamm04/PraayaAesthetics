@@ -44,9 +44,12 @@ const FAQSection = () => {
 
           {/* Right Column - FAQ Accordion */}
           <div className="flex flex-col gap-8">
-            <h2 className="text-left text-4xl md:text-5xl font-heading font-semibold text-primary mb-4">
-              Frequently Asked Questions
-            </h2>
+            <div className="flex flex-col items-start mb-4">
+              <h2 className="text-left text-4xl md:text-5xl font-heading font-semibold text-primary">
+                Frequently Asked Questions
+              </h2>
+              <div className="h-0.5 w-12 bg-primary mt-2" />
+            </div>
 
             <AccordionPrimitive.Root type="single" collapsible className="space-y-4">
               {faqs.map((faq, i) => (

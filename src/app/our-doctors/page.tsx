@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import doctor from "@/assets/doctor.jpeg";
+import { ArrowRight } from "lucide-react";
+import DoctorCard from "@/components/DoctorCard";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -49,97 +49,59 @@ const OurDoctors = () => {
 
 
 
-            {/* Doctor Profiles */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 space-y-24">
+            {/* Doctors Grid */}
+            <section className="py-16 px-4 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <DoctorCard
+                        name="Dr. Prajwal"
+                        role="Plastic Surgeon"
+                        imageSrc="/doctors/dr-prajwal.jpg"
+                        shortBio="Dr. Prajwal is a consultant Plastic surgeon. He has done his super-specialization (M.Ch) in Plastic surgery from the prestigious JIPMER, Pondicherry."
+                        fullBio={[
+                            "Dr. Prajwal is a highly skilled Maxillofacial Surgeon with extensive training in facial plastic and reconstructive surgery. His expertise spans across complex facial trauma, orthognathic surgery, temporomandibular joint (TMJ) total replacement, craniofacial surgery, and head-neck tumor management.",
+                            "Having completed fellowships in Facial Plastic & Craniofacial Surgery, Ear Reconstruction, and TMJ Total Replacement, Dr. Prajwal combines surgical precision with an artistic approach to enhance both function and aesthetics. Renowned for his expertise in facial cosmetic surgery, he specializes in procedures that restore harmony and confidence to his patients."
+                        ]}
+                        specialties={[
+                            "M.Ch in Plastic Surgery (JIPMER)",
+                            "Cosmetic Surgery Specialist",
+                            "Reconstructive Surgery Expert",
+                            "Hand Surgery Specialist"
+                        ]}
+                    />
 
-                    {/* Dr. Prajwal */}
-                    <div className="flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-16 items-start">
-                        {/* Mobile Name */}
-                        <h2 className="text-3xl font-heading font-medium text-gold leading-tight md:hidden w-full text-center">Dr. Prajwal</h2>
+                    <DoctorCard
+                        name="Dr. Praveen Kumar H. P"
+                        role="Plastic Surgeon"
+                        imageSrc="/doctors/dr-praveen.jpg"
+                        shortBio="Dr. Praveen Kumar H. P is a consultant Plastic surgeon. He was working as Assistant Professor in the Department of Plastic Surgery at SSIMS, Davangere."
+                        fullBio={[
+                            "Dr. Praveen Kumar H. P is a national board-certified plastic surgeon with a deep passion for microvascular surgery and a broad spectrum of expertise in plastic and reconstructive procedures. He completed his MBBS from the prestigious JJM Medical College, Davanagere, and pursued a rigorous 6-year plastic surgery training under the National Board of Examinations at Sparsh Hospital, Bangalore.",
+                            "Driven by a commitment to excellence, Dr. Praveen further honed his skills through specialized training at esteemed plastic surgery centers, expanding his expertise across various subspecialties. He has keen interest in Trauma and reconstructive surgery, Hand surgery, Onco reconstruction, congenital anomalies, burn management and cosmetic surgeries."
+                        ]}
+                        specialties={[
+                            "M.Ch in Plastic Surgery (BJ Medical)",
+                            "Reconstructive Surgery Expert",
+                            "Onco Reconstruction Specialist",
+                            "Burn Management Expert"
+                        ]}
+                    />
 
-                        {/* Image - Left */}
-                        <div className="w-full md:col-span-5 lg:col-span-4">
-                            <div className="relative h-[400px] w-full overflow-hidden shadow-none">
-                                <Image
-                                    src="/doctors/dr-prajwal.jpg"
-                                    alt="Dr. Prajwal"
-                                    fill
-                                    className="object-cover object-top rounded-lg"
-                                />
-                            </div>
-                        </div>
-                        {/* Content - Right */}
-                        <div className="w-full md:col-span-7 lg:col-span-8 space-y-6 text-left pt-4">
-                            <div className="flex flex-col gap-2">
-                                <h2 className="text-3xl md:text-4xl font-heading font-medium text-gold leading-tight hidden md:block">Dr. Prajwal</h2>
-                            </div>
-                            <p className="text-muted-foreground leading-relaxed text-base">
-                                Dr. Prajwal is a highly skilled Maxillofacial Surgeon with extensive training in facial plastic and reconstructive surgery. His expertise spans across complex facial trauma, orthognathic surgery, temporomandibular joint (TMJ) total replacement, craniofacial surgery, and head-neck tumor management.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed text-base">
-                                Having completed fellowships in Facial Plastic & Craniofacial Surgery, Ear Reconstruction, and TMJ Total Replacement, Dr. Prajwal combines surgical precision with an artistic approach to enhance both function and aesthetics. Renowned for his expertise in facial cosmetic surgery, he specializes in procedures that restore harmony and confidence to his patients. With a patient-centric approach, Dr. Prajwal strives to deliver exceptional outcomes in facial reconstruction and aesthetic enhancement. At Praaya Aesthetic Clinic, he is dedicated to providing cutting-edge treatments in facial aesthetics and reconstructive surgery, ensuring the highest standards of care for every patient.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Dr. Praveen Kumar H. P */}
-                    <div className="flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-16 items-start">
-                        {/* Mobile Name */}
-                        <h2 className="text-3xl font-heading font-medium text-gold leading-tight md:hidden w-full text-center">Dr. Praveen Kumar H. P</h2>
-
-                        {/* Image - Left */}
-                        <div className="w-full md:col-span-5 lg:col-span-4">
-                            <div className="relative h-[400px] w-full overflow-hidden shadow-none bg-secondary/20">
-                                <Image
-                                    src="/doctors/dr-praveen.jpg"
-                                    alt="Dr. Praveen Kumar H. P"
-                                    fill
-                                    className="object-cover object-top rounded-lg"
-                                />
-                            </div>
-                        </div>
-                        {/* Content - Right */}
-                        <div className="w-full md:col-span-7 lg:col-span-8 space-y-6 text-left pt-4">
-                            <div className="flex flex-col gap-2">
-                                <h2 className="text-3xl md:text-4xl font-heading font-medium text-gold leading-tight hidden md:block">Dr. Praveen Kumar H. P</h2>
-                            </div>
-                            <p className="text-muted-foreground leading-relaxed text-base">
-                                Dr. Praveen Kumar H. P is a national board-certified plastic surgeon with a deep passion for microvascular surgery and a broad spectrum of expertise in plastic and reconstructive procedures. He completed his MBBS from the prestigious JJM Medical College, Davanagere, and pursued a rigorous 6-year plastic surgery training under the National Board of Examinations at Sparsh Hospital, Bangalore—a renowned center for tertiary trauma care, microvascular reconstruction, and advanced plastic surgery.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed text-base">
-                                Driven by a commitment to excellence, Dr. Praveen further honed his skills through specialized training at esteemed plastic surgery centers, expanding his expertise across various subspecialties. As a lifetime member of multiple national and international academic bodies, he actively participates in conferences, ensuring he stays at the forefront of advancements in plastic and reconstructive surgery. Beyond his surgical expertise, Dr. Praveen is widely recognized for his compassionate approach toward patients. Among medical circles, he is highly regarded for his extensive experience in limb replantations and complex microvascular procedures, consistently delivering exceptional surgical outcomes.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Dr. Aishwarya Ghattad */}
-                    <div className="flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-16 items-start">
-                        {/* Mobile Name */}
-                        <h2 className="text-3xl font-heading font-medium text-gold leading-tight md:hidden w-full text-center">Dr. Aishwarya Ghattad</h2>
-
-                        {/* Image - Left */}
-                        <div className="w-full md:col-span-5 lg:col-span-4">
-                            <div className="relative h-[400px] w-full overflow-hidden shadow-none bg-secondary/20">
-                                <Image
-                                    src="/doctors/dr-aishwarya.jpg"
-                                    alt="Dr. Aishwarya Ghattad"
-                                    fill
-                                    className="object-cover object-top rounded-lg"
-                                />
-                            </div>
-                        </div>
-                        {/* Content - Right */}
-                        <div className="w-full md:col-span-7 lg:col-span-8 space-y-6 text-left pt-4">
-                            <div className="flex flex-col gap-2">
-                                <h2 className="text-3xl md:text-4xl font-heading font-medium text-gold leading-tight hidden md:block">Dr. Aishwarya Ghattad</h2>
-                            </div>
-                            <p className="text-muted-foreground leading-relaxed text-base">
-                                Dr. Aishwarya Ghattad is a highly skilled cosmetologist, specializing in advanced aesthetic treatments that enhance natural beauty and restore youthful confidence. With expertise in lasers, thread lifts, Botox, and dermal fillers, she offers customized non-surgical solutions for facial rejuvenation and skin enhancement. Her deep understanding of skin health and facial aesthetics allows her to deliver personalized treatments that address concerns such as aging, pigmentation, fine lines, and facial contouring. Dr. Aishwarya stays at the forefront of the latest advancements in cosmetic dermatology, ensuring her patients receive the most effective and cutting-edge treatments. Known for her precision, artistry, and patient-centric approach, she has helped countless individuals achieve naturally beautiful and long-lasting results.
-                            </p>
-                        </div>
-                    </div>
-
+                    <DoctorCard
+                        name="Dr. Aishwarya Ghattad"
+                        role="Cosmetologist"
+                        imageSrc="/doctors/dr-aishwarya.jpg"
+                        shortBio="Dr. Aishwarya Ghattad is a highly skilled cosmetologist, specializing in advanced aesthetic treatments. With expertise in lasers, thread lifts, Botox, and dermal fillers."
+                        fullBio={[
+                            "Dr. Aishwarya Ghattad is a highly skilled cosmetologist, specializing in advanced aesthetic treatments that enhance natural beauty and restore youthful confidence. With expertise in lasers, thread lifts, Botox, and dermal fillers, she offers customized non-surgical solutions for facial rejuvenation and skin enhancement.",
+                            "Her deep understanding of skin health and facial aesthetics allows her to deliver personalized treatments that address concerns such as aging, pigmentation, fine lines, and facial contouring. Dr. Aishwarya stays at the forefront of the latest advancements in cosmetic dermatology, ensuring her patients receive the most effective and cutting-edge treatments."
+                        ]}
+                        specialties={[
+                            "Cosmetic Dermatology",
+                            "Facial Rejuvenation",
+                            "Laser Treatments",
+                            "Anti-Aging Specialist"
+                        ]}
+                    />
                 </div>
             </section>
 

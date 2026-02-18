@@ -9,7 +9,10 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Mobile Only - About Us Label */}
-          <p className="text-primary tracking-[0.25em] text-sm font-semibold uppercase text-center md:hidden w-full">About Us</p>
+          <div className="flex flex-col items-center md:hidden w-full">
+            <p className="text-primary tracking-[0.25em] text-sm font-semibold uppercase">About Us</p>
+            <div className="h-0.5 w-10 bg-primary mt-1" />
+          </div>
 
           {/* Left - Images */}
           <div className="relative flex gap-4 w-full order-2 md:order-first">
@@ -24,7 +27,10 @@ const AboutSection = () => {
 
           {/* Right - Content */}
           <div className="w-full order-3">
-            <p className="text-primary tracking-[0.25em] text-sm font-semibold uppercase mb-3 hidden md:block">About Us</p>
+            <div className="hidden md:flex flex-col items-start mb-3">
+              <p className="text-primary tracking-[0.25em] text-sm font-semibold uppercase">About Us</p>
+              <div className="h-0.5 w-10 bg-primary mt-1" />
+            </div>
             <h2 className="text-4xl md:text-5xl font-heading font-semibold text-foreground mb-6 leading-tight text-center md:text-left">
               Empowering Your True Beauty
             </h2>
