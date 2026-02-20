@@ -148,13 +148,13 @@ const ServicesSection = ({ variant = "default" }: { variant?: "default" | "simpl
           </div>
         )}
 
-        <div className={`grid grid-cols-1 md:grid-cols-2 ${isSimple ? "lg:grid-cols-5" : "lg:grid-cols-4"} gap-6`}>
+        <div className={`grid ${isSimple ? "grid-cols-2" : "grid-cols-1"} md:grid-cols-2 ${isSimple ? "lg:grid-cols-5" : "lg:grid-cols-4"} gap-6`}>
           {services.map((service) => (
             <Link href="/services" key={service.name} className="block h-full">
               {isSimple ? (
                 // Simple Variant (Home Page)
                 <div className="group flex flex-col items-center text-center cursor-pointer h-full">
-                  <div className="mb-4 relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
+                  <div className="mb-4 relative h-20 w-20 transition-transform duration-300 group-hover:scale-110">
                     <Image
                       src={service.image}
                       alt={service.name}
@@ -173,7 +173,7 @@ const ServicesSection = ({ variant = "default" }: { variant?: "default" | "simpl
                 >
                   {/* Main Content (Icon + Title) */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:-translate-y-8">
-                    <div className="mb-3 relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
+                    <div className="mb-3 relative h-16 w-16 transition-transform duration-300 group-hover:scale-110">
                       <Image
                         src={service.image}
                         alt={service.name}
