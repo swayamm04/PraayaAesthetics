@@ -117,7 +117,7 @@ const ReviewsSection = () => {
 
   return (
     <section className="py-20 bg-background text-foreground">
-      <div className="container mx-auto px-20">
+      <div className="container mx-auto px-4 md:px-20">
         <h2 className="text-center text-4xl md:text-5xl font-heading font-semibold mb-12">
           Reviews
         </h2>
