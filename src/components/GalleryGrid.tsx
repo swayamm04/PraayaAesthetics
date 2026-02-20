@@ -34,7 +34,7 @@ const GalleryGrid = () => {
 
     return (
         <section className="py-16 bg-background">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 lg:px-20">
                 <h2 className="text-4xl md:text-5xl font-heading text-center mb-12 text-primary">Our Clinic Gallery</h2>
 
                 <div

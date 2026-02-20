@@ -31,7 +31,7 @@ const OurDoctors = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative py-20 bg-[#FFF9F5] flex items-center justify-center text-center px-4">
+            <section className="relative py-20 bg-[#FFF9F5] flex items-center justify-center text-center px-4 lg:px-20">
                 <div className="max-w-3xl">
                     <p className="text-primary tracking-[0.25em] text-sm font-semibold uppercase mb-4">
                         Our Team
@@ -50,8 +50,8 @@ const OurDoctors = () => {
 
 
             {/* Doctors Grid */}
-            <section className="py-16 px-4 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section className="py-16 px-4 lg:px-20 max-w-7xl mx-auto">
+                <div className="flex flex-col gap-16">
                     <DoctorCard
                         name="Dr. Prajwal"
                         role="Plastic Surgeon"
@@ -84,6 +84,7 @@ const OurDoctors = () => {
                             "Onco Reconstruction Specialist",
                             "Burn Management Expert"
                         ]}
+                        isReversed={true}
                     />
 
                     <DoctorCard
@@ -107,7 +108,7 @@ const OurDoctors = () => {
 
             {/* CTA Section */}
             <section className="py-20 bg-background">
-                <div className="container mx-auto px-4 text-center">
+                <div className="container mx-auto px-4 lg:px-20 text-center">
                     <div className="max-w-3xl mx-auto space-y-8">
                         <h2 className="text-4xl md:text-5xl font-heading font-semibold text-foreground">
                             Get Free Consultation

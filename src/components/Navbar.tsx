@@ -16,8 +16,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-background shadow-sm">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+    <nav className="sticky top-0 z-50 bg-background shadow-xl">
+      <div className="container mx-auto flex items-center justify-between px-4 lg:px-20 py-6">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3">
           <div className="relative h-12 w-48 lg:h-14 lg:w-56">
@@ -37,7 +37,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-semibold tracking-wide text-foreground hover:text-primary transition-colors"
+              className="text-sm font-bold tracking-wide text-foreground hover:text-primary transition-colors"
             >
               {link.label}
             </a>
@@ -47,7 +47,7 @@ const Navbar = () => {
         {/* CTA */}
         <a
           href="/contact"
-          className="hidden lg:inline-block rounded-full border-2 border-primary px-6 py-2 text-sm font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+          className="hidden lg:inline-block rounded-md bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-md hover:bg-primary/90 transition-colors"
         >
           Book Appointment
         </a>

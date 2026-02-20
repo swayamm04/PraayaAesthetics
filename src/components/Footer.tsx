@@ -7,7 +7,7 @@ const Footer = () => {
     <footer id="contact" className="bg-[#1C252B] text-white">
       {/* Top Section with Borders */}
       <div className="border-y border-white/10">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-3">
             {/* Social Icons */}
             <div className="py-8 md:py-12 flex justify-center items-center border-b md:border-b-0 md:border-r border-white/10">
@@ -59,7 +59,7 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 lg:px-20 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
           {/* About Column */}
           <div className="flex flex-col items-start text-left">
@@ -126,7 +126,7 @@ const Footer = () => {
 
       {/* Copyright Strip */}
       <div className="bg-[#141B1F] py-6 border-t border-white/5">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 lg:px-20 text-center">
           <p className="text-gray-500 text-sm">
             Copyright © {new Date().getFullYear()}. All Rights Reserved By PRAAYA AESTHETIC INTERNATIONALE
           </p>

@@ -30,7 +30,7 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section id="faq" className="py-20 bg-background overflow-hidden">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-20">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Promo Content */}
           <div className="relative order-last lg:order-first">

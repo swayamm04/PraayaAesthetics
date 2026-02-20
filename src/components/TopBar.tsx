@@ -2,8 +2,8 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 const TopBar = () => {
   return (
-    <div className="hidden lg:block bg-white text-gray-600 py-2 text-sm border-b border-primary/50">
-      <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-1 px-4">
+    <div className="hidden lg:block bg-white text-gray-600 py-2 text-sm border-b border-primary">
+      <div className="container mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-1 px-4 lg:px-20">
         <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-gold transition-colors">
           <MapPin className="h-4 w-4 text-primary" />
           <span>Kuvempu Rd, Near Jail Circle, Shivamogga</span>

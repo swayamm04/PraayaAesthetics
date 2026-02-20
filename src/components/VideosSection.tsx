@@ -25,7 +25,7 @@ const VideosSection = () => {
 
   return (
     <section id="gallery" className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-20">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-center text-4xl md:text-5xl font-heading font-semibold text-foreground">
             Popular Videos
@@ -43,24 +43,24 @@ const VideosSection = () => {
               href={`https://www.youtube.com/watch?v=${video.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow min-w-[70%] sm:min-w-[40%] lg:min-w-[20%] snap-center flex-shrink-0"
+              className="group block rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow min-w-[85%] md:min-w-[48%] lg:min-w-[31%] snap-center flex-shrink-0"
             >
               <div className="relative">
                 <img
                   src={`https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`}
                   alt={video.title}
-                  className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-foreground/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="h-10 w-10 rounded-full bg-primary/90 flex items-center justify-center">
-                    <svg className="h-4 w-4 text-primary-foreground ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="h-12 w-12 rounded-full bg-primary/90 flex items-center justify-center">
+                    <svg className="h-5 w-5 text-primary-foreground ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
                 </div>
               </div>
-              <div className="p-3 bg-background">
-                <p className="text-xs font-semibold text-foreground line-clamp-2">{video.title}</p>
+              <div className="p-4 bg-background">
+                <p className="text-sm font-semibold text-foreground line-clamp-2">{video.title}</p>
               </div>
             </a>
           ))}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import about1 from "@/assets/about-1.jpg";
 import about2 from "@/assets/about-2.jpeg";
 import aboutMedia from "@/assets/about-media.jpg";
@@ -6,7 +7,7 @@ import aboutMedia from "@/assets/about-media.jpg";
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-20">
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Mobile Only - About Us Label */}
           <div className="flex flex-col items-center md:hidden w-full">
@@ -43,9 +44,10 @@ const AboutSection = () => {
             <div className="text-center md:text-left">
               <a
                 href="#contact"
-                className="inline-block rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground hover:bg-gold-dark transition-colors"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground hover:bg-gold-dark transition-colors"
               >
                 Book Appointment
+                <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </div>

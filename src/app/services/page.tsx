@@ -21,7 +21,7 @@ const Services = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative py-20 bg-[#FFF9F5] flex items-center justify-center text-center px-4">
+            <section className="relative py-20 bg-[#FFF9F5] flex items-center justify-center text-center px-4 lg:px-20">
                 <div className="max-w-3xl">
                     <p className="text-primary tracking-[0.25em] text-sm font-semibold uppercase mb-4">
                         What We Offer

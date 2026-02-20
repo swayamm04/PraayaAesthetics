@@ -3,6 +3,7 @@ import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import HeroSlider from "@/components/HeroSlider";
 import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FAQSection from "@/components/FAQSection";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -63,6 +64,7 @@ export default function Home() {
             <Navbar />
             <HeroSlider />
             <AboutSection />
+            <ServicesSection variant="simple" />
             <WhyChooseUs />
             <FAQSection />
             <ReviewsSection />

@@ -106,7 +106,7 @@ const HeroSlider = () => {
                       <p className="text-lg lg:text-xl xl:text-3xl font-bold text-primary mb-4 italic tracking-widest">
                         {slide.content.subtitle}
                       </p>
-                      <div className="bg-primary text-white py-2.5 px-10 rounded-xl shadow-lg">
+                      <div className="bg-primary text-white py-2.5 px-10 lg:px-20 rounded-xl shadow-lg">
                         <p className="text-base lg:text-lg xl:text-xl font-bold tracking-[0.1em]">
                           {slide.content.highlight}
                         </p>
@@ -134,7 +134,7 @@ const HeroSlider = () => {
 
             {/* Mobile Overlay Content */}
             {slide.content && (
-              <div className="block md:hidden absolute inset-0 pt-[2%] px-4 font-body">
+              <div className="block md:hidden absolute inset-0 pt-[2%] px-4 lg:px-20 font-body">
                 <div className="w-full text-center flex flex-col items-center">
                   {slide.content.isBanner2 ? (
                     <>
